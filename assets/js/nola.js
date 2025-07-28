@@ -27,11 +27,12 @@
     history.scrollRestoration = 'manual';
   }
 
+
   // typewriter effect
   window.addEventListener('DOMContentLoaded', () => {
     const el = document.querySelector('.typing-text');
     const text = el.textContent;
-    el.textContent = ""; // Clear the original text
+    el.textContent = ""; 
 
     // Split the text into individual spans
     text.split("").forEach((char) => {
@@ -77,6 +78,63 @@
   });
 
 
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const el = document.querySelector('.typing-text-mobile');
+    if (!el) return;
+
+    const text = el.innerHTML.trim(); // Keep <br> tags
+
+    const chars = [];
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === ' ') {
+        chars.push("&nbsp;");
+      } else if (char === '<') {
+        // Preserve <br> tags
+        const brEnd = text.indexOf('>', i);
+        chars.push(text.slice(i, brEnd + 1));
+        i = brEnd;
+      } else {
+        chars.push(char);
+      }
+    }
+
+    el.innerHTML = "";
+
+    chars.forEach(char => {
+      if (char.includes("<br")) {
+        el.innerHTML += char; // Inject <br> directly
+      } else {
+        const span = document.createElement("span");
+        span.className = "char";
+        span.style.opacity = "0";
+        span.style.display = "inline-block";
+        span.innerHTML = char;
+        el.appendChild(span);
+      }
+    });
+
+    gsap.fromTo(
+      el.querySelectorAll(".char"),
+      { opacity: 0, y: 20, scale: 0.8 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.1,
+        stagger: 0.09,
+        ease: "power2.out"
+      }
+    );
+  });
+
+
+  
+
+
+  
 
 
   
