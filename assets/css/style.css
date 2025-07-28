@@ -797,6 +797,10 @@ li a {
 }
 
 @media (max-width: 425px) {
+    .hero {
+        height: 100%;
+    }
+    
     .hook {
         gap: 1.2rem;
         margin: 0 auto;
