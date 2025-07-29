@@ -61,21 +61,21 @@
     <!-- Navbar -->
     <header class="navbar">
         <div class="nav-inner">
-            <a href="nola.html" class="logo">
-                <img src="assets/images/LOGO.png" alt="Company Logo">
+            <a href="index.html" class="logo">
+                <img src="assets/images/nola.png" alt="Company Logo">
             </a> 
        
             <!-- Nav center -->
              <nav class="nav-center">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">WhatsApp <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
-                    <li><a href="">Instagram <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="https://wa.me/2349183561235">WhatsApp <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
+                    <li><a href="https://www.instagram.com/nola_energy?igsh=Y2N6enc0a3ZubmQ4&utm_source=qr">Instagram <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
                 </ul>
              </nav>
 
-            <button class="sales-btn">Contact Sales</button>
+            <button class="sales-btn" onclick="window.open('https://wa.me/2349183561235', '_blank')">Contact Sales</button>
 
             <!-- Hamburger Menu-->
              <button class="hamburger" aria-label="Open menu" aria-controls="side-menu" aria-expanded="false">
@@ -92,16 +92,16 @@
     <nav class="side-nav">
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">WhatsApp <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
-             <li><a href="">Instagram <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="https://wa.me/2349183561235">WhatsApp <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
+             <li><a href="https://www.instagram.com/nola_energy?igsh=Y2N6enc0a3ZubmQ4&utm_source=qr">Instagram <img src="assets/images/link.svg" alt="link arrow" class="link-arrow"></a></li>
         </ul>
 
-        <button class="sales-btn side-sales">Contact Sales</button>
+        <button class="sales-btn side-sales" onclick="window.open('https://wa.me/2349183561235', '_blank')">Contact Sales</button>
     </nav>
     </aside>
 
-    <section class="hero">
+    <section id="about" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hook">
@@ -112,7 +112,7 @@
               
                <p>We supply diesel across Lekki and everywhere around Lagos fast and reliably. Quality fuel at great prices. Order diesel for your homes & business. Get free quote now.</p>
                
-               <button class="hero-btn">Get a Quote</button> 
+               <button class="hero-btn" onclick="location.href='#quote'">Get a Quote</button> 
             </div>
 
             <div class="stats">
@@ -134,7 +134,7 @@
         <div class="Services-wrap">
             <h2>Our Services</h2>
 
-            <div class="services-items">
+            <div id="services" class="services-items">
                 <div class="service-card">
                     <img src="assets/images/Pump.svg" alt="Diesel Pump">
                     <h3>Bulk Diesel Supply</h3>
@@ -180,9 +180,9 @@
             <p>
                Get in touch for bulk diesel orders, delivery inquiries, or price quotes. Serving from Lekki, Lagos Island to all environs in Nigeria with reliable fuel supply 
             </p>
-            <button class="cta2-btn">Contact Us Now</button>
+            <button class="cta2-btn" onclick="window.open('https://wa.me/2349183561235', '_blank')">Contact Us Now</button>
         </div>
-        <div class="pricing-details">
+        <div id="quote" class="pricing-details">
             <h2>
                 Get Pricing
             </h2>
@@ -232,6 +232,57 @@
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="contact-item">
+            <p><img src="assets/images/phone.svg" alt="phone">Customer Service Line</p>
+            <a href="tel:+2349183561235">+234 918 356 1234</a>
+            </div>
+            <div class="contact-item">
+            <p><img src="assets/images/envelope.svg" alt="envelope">Email Address</p>
+            <a href="mailto:nolaenergy1000@gmail.com">nolaenergy1000@gmail.com</a>
+            </div>
+            <div class="contact-item">
+            <p><img src="assets/images/WhatsApp.svg" alt="WhatsApp">WhatsApp Line</p>
+            <a href="https://wa.me/2349183561235" target="_blank">+234 918 356 1234</a>
+            </div>
+        </div>
+
+        <!-- Middle line: Logo, services, social -->
+        <div class="footer-middle">
+            <div class="footer-brand">
+                <img src="assets/images/nola-modified.png" alt="Company Logo" class="footer-logo">
+                <p>NOLA Energy is your trsuted supplier of diesel fuel to homes and business across Lekki, Lagos Island to all environs in Nigeria.</p>
+            </div>
+
+            <div class="footer-services">
+            <h4>Services</h4>
+            <ul>
+                <li>Bulk Diesel Supply</li>
+                <li>Nationwide Logistics</li>
+                <li>24/7 Availability</li>
+            </ul>
+            </div>
+
+            <div class="footer-socials">
+            <div class="social-icons">
+                <a href=""><img src="assets/images/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/nola_energy?igsh=Y2N6enc0a3ZubmQ4&utm_source=qr"><img src="assets/images/instagram.svg" alt="Instagram"></a>
+                <a href="https://wa.me/2349183561235"><img src="assets/images/whatsapp2.svg" alt="WhatsApp"></a>
+            </div>
+            </div>
+        </div>
+
+        <!-- Bottom line: copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 NOLA Energy. All Rights Reserved.</p>
+            <div class="footer-links">
+            <a href="https://wa.me/2349183561235" target="_blank">WhatsApp <img src="assets/images/ArrowUpRight.svg" alt="link arrow"></a>
+            <a href="https://www.instagram.com/nola_energy?igsh=Y2N6enc0a3ZubmQ4&utm_source=qr" target="_blank">Instagram <img src="assets/images/ArrowUpRight.svg" alt="link arrow"></a>
+            </div>
+        </div>
+    </footer>
         
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
