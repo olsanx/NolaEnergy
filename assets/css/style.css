@@ -712,6 +712,34 @@ li a {
         justify-content: center;
         align-items: center;
     }
+
+    .jumbotron {
+        padding: 2.25rem 6.125rem;
+    }
+
+    .jumbotron-slider {
+        position: relative;
+        width: 100%;
+        max-width: 62.5rem;
+        height: 20.875rem;
+        overflow: hidden;
+    }
+
+    .jumbo-content h2 {
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 2.125rem;
+        width: 46.0625rem;
+        color: #ffffff;
+        margin: 0 0 1.175rem 2.025rem;
+    }
+
+    .jumbo-image {
+        max-width: 60%;
+        width: 13.3125rem;
+        height: 13.3125rem;
+        margin: 1rem 2.625rem 0 0;
+    }
   
 }
 
@@ -749,10 +777,6 @@ li a {
     }
 
     .jumbotron {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 3.25rem 2.125rem;
     }
 
@@ -760,56 +784,8 @@ li a {
         position: relative;
         width: 100%;
         max-width: 62.5rem;
-        height: 20.875rem;
+        height: 18.875rem;
         overflow: hidden;
-    }
-
-    .jumbo1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 1rem;
-        overflow: hidden;
-        opacity: 0;
-        transform: translateX(100%);
-        transition: opacity 1s ease, transform 1s ease;
-        z-index: 0;
-    }
-
-    .jumbo1.active {
-        opacity: 1;
-        transform: translateX(0);
-        z-index: 1;
-    }
-
-    .jumbo1.purple {
-        background-color: #3029ae;
-    }
-
-    .jumbo1.black {
-        background-color: #0e0d0d;
-    }
-
-    .lines {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .jumbo-content {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
     }
 
     .jumbo-content h2 {
@@ -823,8 +799,8 @@ li a {
 
     .jumbo-image {
         max-width: 60%;
-        width: 13.3125rem;
-        height: 13.3125rem;
+        width: 10.3125rem;
+        height: 10.3125rem;
         margin: 1rem 2.625rem 0 0;
     }
 }
@@ -881,7 +857,65 @@ li a {
   }
 }
 
+@media (max-width: 600px) {
+    .services-uno {
+        padding: 6.25rem 1.0625rem;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
 
+    .services-uno h2 {
+        font-size: 1.9375rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .services-items {
+        flex-wrap: wrap; 
+        max-width: 73.875rem;
+    }
+
+    .service-card {
+        max-width: 32.75rem;
+    }
+
+    .services-deux {
+        padding: 4.25rem 1.125rem;
+        gap: 3.5rem;
+    }
+
+    .personnel img {
+        max-width: 100%;
+        width: 36.25rem;
+        min-width: 15rem;
+    }
+
+    .pricing {
+        padding: 6.25rem 1.125rem;
+    }
+
+    .jumbotron {
+        padding: 3.25rem 2.125rem;
+    }
+
+    .jumbotron-slider {
+        height: 13.875rem;
+        overflow: hidden;
+    }
+
+    .jumbo-content h2 {
+        font-size: 1.5rem;
+        margin: 1.2rem 0 1.175rem 2.025rem;
+    }
+
+    .jumbo-image {
+        max-width: 60%;
+        width: 10.3125rem;
+        height: 10.3125rem;
+        margin: 1rem .625rem 0 0;
+    }
+}
 
 
 @media (max-width: 499px) {
@@ -994,8 +1028,27 @@ li a {
         gap: 2rem;
     }
 
+    .jumbotron {
+        padding: 2.25rem .825rem;
+    }
 
+    .jumbotron-slider {
+        height: 12.075rem;
+        overflow: hidden;
+    }
 
+    .jumbo-content h2 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+        margin: 1.2rem 0 1.175rem 2.025rem;
+    }
+
+    .jumbo-image {
+        max-width: 40%;
+        width: 9.3125rem;
+        height: 9.3125rem;
+        margin: .5rem .625rem 0 0;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1006,6 +1059,28 @@ li a {
 
     .hook p {
         font-size: .9rem;
+    }
+
+    .jumbotron {
+        padding: 2.25rem .825rem;
+    }
+
+    .jumbotron-slider {
+        height: 10.075rem;
+        overflow: hidden;
+    }
+
+    .jumbo-content h2 {
+        font-size: 1rem;
+        line-height: 1.3;
+        margin: 1.2rem 0 1.175rem 1.825rem;
+    }
+
+    .jumbo-image {
+        max-width: 30%;
+        width: 7.3125rem;
+        height: 7.3125rem;
+        margin: .5rem .625rem 0 0;
     }
 }
 
