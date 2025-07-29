@@ -17,9 +17,20 @@
   });
 
 
+  // Close side menu on internal link click
+document.querySelectorAll('.side-nav a[href^="#"]').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('side-menu').classList.remove('open');
+    document.querySelector('[data-overlay]').classList.remove('show');
+    document.querySelector('.hamburger').classList.remove('is-active');
+  });
+});
+
+
+
   // scroll up
   window.addEventListener("load", () => {
-  window.scrollTo(0, 0); // force scroll to top on page load
+  window.scrollTo(0, 0); 
   });
 
   // Optional: override browser's scroll restoration
