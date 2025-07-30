@@ -76,7 +76,7 @@
     margin-right: 14.4375rem;
 }
 
-.footer-services h4 {
+.footer-services h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -202,7 +202,7 @@
     margin-right: 14.4375rem;
 }
 
-.footer-services h4 {
+.footer-services h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -329,7 +329,7 @@
     margin-bottom: 2rem;
 }
 
-.footer-services h4 {
+.footer-services h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -457,7 +457,7 @@
     margin-bottom: 2rem;
 }
 
-.footer-services h4 {
+.footer-services h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 500;
