@@ -95,32 +95,8 @@
                        SCROLLER ANIMATION
     ========================================================================== */
 
-    const scrollers = document.querySelectorAll(".scroller");
 
-    // If a user hasn't opted in for recuded motion, then we add the animation
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        addAnimation();
-    }
-
-    function addAnimation() {
-        scrollers.forEach((scroller) => {
-            // add data-animated="true" to every `.scroller` on the page
-            scroller.setAttribute("data-animated", true);
-
-            // Make an array from the elements within `.scroller-inner`
-            const scrollerInner = scroller.querySelector(".scroller__inner");
-            const scrollerContent = Array.from(scrollerInner.children);
-
-            // For each item in the array, clone it
-            // add aria-hidden to it
-            // add it into the `.scroller-inner`
-            scrollerContent.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true);
-                duplicatedItem.setAttribute("aria-hidden", true);
-                scrollerInner.appendChild(duplicatedItem);
-            });
-        });
-    }
+  
 
 
 
@@ -131,20 +107,6 @@
      * ----------------------------------------------------------------------------------------
      */
 
- 
-
-    /*
-     * ----------------------------------------------------------------------------------------
-     *  Lenis JS
-     * ----------------------------------------------------------------------------------------
-     */
-   lenis.on('scroll', ScrollTrigger.update)
-
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000)
-    })
-
-    gsap.ticker.lagSmoothing(1000, 16)
 
 
 
@@ -191,27 +153,7 @@
        When document is scroll, do
        ========================================================================== */
 
-    $(window).on('scroll', function() {
 
-        // ## Header Style and Scroll to Top
-        function headerStyle() {
-            if ($('.main-header').length) {
-                var windowpos = $(window).scrollTop();
-                var siteHeader = $('.main-header');
-                var scrollLink = $('.scroll-top');
-                if (windowpos >= 100) {
-                    siteHeader.addClass('fixed-header');
-                    scrollLink.fadeIn(300);
-                } else {
-                    siteHeader.removeClass('fixed-header');
-                    scrollLink.fadeOut(300);
-                }
-            }
-        }
-
-        headerStyle();
-
-    });
 
 
 
