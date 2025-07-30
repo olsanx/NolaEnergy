@@ -131,34 +131,20 @@
      * ----------------------------------------------------------------------------------------
      */
 
-    function scrollNav() {
-        $('.onepage li a').click(function() {
-            $(".onepage li a.active").removeClass("active");
-            $(this).addClass("active");
-
-            $('html, body').stop().animate({
-                scrollTop: $($(this).attr('href')).offset().top - 100
-            }, 1000);
-            return false;
-        });
-    }
-    scrollNav();
+ 
 
     /*
      * ----------------------------------------------------------------------------------------
      *  Lenis JS
      * ----------------------------------------------------------------------------------------
      */
-    const lenis = new Lenis()
-
-
-    lenis.on('scroll', ScrollTrigger.update)
+   lenis.on('scroll', ScrollTrigger.update)
 
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000)
     })
 
-    gsap.ticker.lagSmoothing(0)
+    gsap.ticker.lagSmoothing(1000, 16)
 
 
 
