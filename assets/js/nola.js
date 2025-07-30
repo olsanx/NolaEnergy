@@ -61,32 +61,31 @@ document.querySelectorAll('.side-nav a[href^="#"]').forEach(link => {
 
 
   window.addEventListener('DOMContentLoaded', () => {
-    const el = document.querySelector('.typing-text');
-    const text = el.textContent;
-    el.textContent = ""; // Clear original text
+  const el = document.querySelector('.typing-text');
+  const text = el.textContent;
+  el.textContent = ""; // Clear original text
 
-    // Preserve spaces by replacing them with non-breaking spaces
-    const chars = text.split("").map(char => char === " " ? "&nbsp;" : char);
+  // Convert text to spans with non-breaking space where needed
+  const chars = text.split("").map(char => char === " " ? "&nbsp;" : char);
+  const spanHTML = chars.map(char => `<span class="char" style="opacity:0; display:inline-block;">${char}</span>`).join("");
 
-    // Add spans for each character
-    chars.forEach(char => {
-      el.innerHTML += `<span class="char" style="opacity:0; display:inline-block;">${char}</span>`;
-    });
+  // Inject all spans in one go — avoids forced reflow
+  el.innerHTML = spanHTML;
 
-    // Animate with scale + fade + slight upward motion
-    gsap.fromTo(
-      ".typing-text .char",
-      { opacity: 0, y: 20, scale: 0.8 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.1,
-        stagger: 0.09,
-        ease: "power2.out"
-      }
-    );
-  });
+  // Animate with GSAP
+  gsap.fromTo(
+    ".typing-text .char",
+    { opacity: 0, y: 20, scale: 0.8 },
+    {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 0.1,
+      stagger: 0.09,
+      ease: "power2.out"
+    }
+  );
+});
 
 
 
