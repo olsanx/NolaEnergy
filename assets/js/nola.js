@@ -216,14 +216,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-
-if (isChrome) {
-  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-}
-
-
-
 
 
 
